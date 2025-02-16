@@ -1,0 +1,185 @@
+.containe{
+    background-color: #f97316; 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px;
+}
+.left-section {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    background-color: #1f2937; /* Dark gray background */
+    color: white;
+    padding: 8px 16px;
+    margin-left: 20px;
+    /* border-radius: 9999px; Rounded full */
+}
+.left-section i {
+    margin-right: 8px;
+}
+
+.department-text {
+    font-weight: bold;
+}
+
+.left-section .fa-chevron-down {
+    margin-left: 8px;
+}
+
+/* Middle Section */
+.middle-section {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 9999px; /* Rounded full */
+    overflow: hidden;
+    width: 50%;
+}
+
+.category-dropdown {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 8px 16px;
+    border-right: 1px solid #e5e7eb; /* Light gray border */
+}
+
+.category-dropdown span {
+    font-size: 14px;
+    color: #6b7280; /* Gray text */
+}
+
+.category-dropdown .fa-chevron-down {
+    margin-left: 4px;
+}
+
+.search-input {
+    flex-grow: 1;
+    padding: 8px 16px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    color: #6b7280; /* Gray text */
+}
+
+.search-button {
+    background-color: #1f2937; /* Dark gray background */
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    border-radius: 0 9999px 9999px 0; /* Rounded right side */
+}
+
+.search-button:hover {
+    background-color: #374151; /* Slightly darker gray on hover */
+}
+
+/* Right Section */
+.right-section {
+    display: flex;
+    align-items: center;
+    gap: 16px; /* Space between icons */
+}
+/* Tooltip Styling */
+.icon-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    padding: 8px;
+    border-radius: 9999px; /* Rounded full */
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+.icon-container i {
+    color: #1f2937; /* Dark gray icon color */
+}
+/* Static Dropdown Menu Styling */
+.static-dropdown-menu {
+    position: absolute;
+    top: 27.3%; /* Position below the left-section */
+    margin-left: 2.99%;
+    left: 0;
+    width: 18.3%; /* Full width of the parent */
+    background-color: white; /* White background */
+    border: 1px solid #ccc; /* Light gray border */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    margin-top: 8px; /* Gap between the button and the dropdown */
+    padding: 8px 0;
+    z-index: 10; /* Ensure it appears above other elements */
+    list-style: none; /* Remove bullet points */
+    transition: opacity 0.3s ease, visibility 0.3s ease; /* Smooth transition */
+}
+
+/* Hidden State */
+.static-dropdown-menu.hidden {
+    opacity: 0; /* Make it invisible */
+    visibility: hidden; /* Hide it completely */
+    pointer-events: none; /* Disable interactions */
+}
+
+.dropdown-item {
+    display: flex;
+    align-items: center;
+    padding: 8px 16px; /* Padding for each option */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 14px; /* Font size */
+    color: #333; /* Text color */
+}
+
+.dropdown-item:hover {
+    background-color: #f0f0f0; /* Light gray background on hover */
+}
+
+.dropdown-icon {
+    margin-right: 8px; /* Space between icon and text */
+}
+
+.dropdown-text {
+    flex: 1; /* Take up remaining space */
+}
+
+.fa-chevron-right {
+    color: #6b7280; /* Gray arrow color */
+}
+/* Tooltip Text */
+.icon-container[data-tooltip]::after {
+    content: attr(data-tooltip); /* Use the value of the data-tooltip attribute */
+    position: absolute;
+    top: 100%; /* Position above the icon */
+    left: 50%;
+    transform: translateX(-50%); /* Center the tooltip */
+    background-color: #333; /* Dark background */
+    color: white; /* White text */
+    padding: 4px 8px;
+    border-radius: 4px; /* Rounded corners */
+    font-size: 12px; /* Small font size */
+    white-space: nowrap; /* Prevent text wrapping */
+    opacity: 0; /* Hidden by default */
+    visibility: hidden; /* Hidden by default */
+    transition: opacity 0.3s ease, visibility 0.3s ease; /* Smooth transition */
+}
+
+/* Show Tooltip on Hover */
+.icon-container:hover::after {
+    opacity: 1; /* Make tooltip visible */
+    visibility: visible; /* Make tooltip visible */
+}
+
+.cart-icon {
+    position: relative;
+}
+
+.cart-count {
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    background-color: #1f2937; /* Dark gray background */
+    color: white;
+    font-size: 10px;
+    padding: 2px 6px;
+    border-radius: 9999px; /* Rounded full */
+}
