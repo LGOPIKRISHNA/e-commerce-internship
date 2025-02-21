@@ -11,6 +11,15 @@ import UsersPage from './components/Userspage/UsersPage.jsx';
 import DealsSlider from "./components/DealsSlider";
 import './styles/App.css';
 import Department from './components/Department.jsx';
+import ItemShow from './components/ItemShow.jsx';
+import Fashion from './components/Fashion.jsx';
+import Electronics from './components/Electronics.jsx';
+import Sports from './components/Sports.jsx';
+import Blog from './Blog.jsx';
+import Products from './components/Products.jsx';
+import OurBest from './components/OurBest.jsx';
+// import CompleteTodayDeals from './components/CompleteTodayDeals.jsx';
+// import Social from './components/Social.jsx';
 
 // A wrapper component to conditionally render layout components
 const AppContent = () => {
@@ -23,6 +32,7 @@ const AppContent = () => {
 
   return (
     <div className="app">
+      {/* <Social/> */}
       <Upperbar />
       <Navbar />
       <Department/>
@@ -50,7 +60,16 @@ const AppContent = () => {
                 <DealsSlider />
               </div>
               <ProductList />
+              {/* <CompleteTodayDeals/> */}
               <TodayDeals />
+              <ItemShow/>
+              <Fashion/>
+              <Electronics/>
+              <Sports/>
+              <OurBest/>
+              <Products/>
+              <Blog/>
+              
             </>
           } />
           <Route path="/signin" element={<Signin />} />

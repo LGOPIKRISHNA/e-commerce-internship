@@ -16,7 +16,7 @@ body {
   position: sticky; /* Make navbar sticky */
   top: 0; /* Stick to the top of the viewport */
   z-index: 1000; /* Ensure it stays above other content */
-  padding: 20px;
+  padding: 10px;
 }
 
 .navbar-container {

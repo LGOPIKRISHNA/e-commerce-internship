@@ -49,7 +49,7 @@ const Department = () => {
     src="https://storage.googleapis.com/a1aa/image/Y1USGcJM6PV7mZs-r5dLa6k_IyHL_Nl_Mpq7iwWBS3U.jpg"
     width="24"
   />
-  <span className="dropdown-text">Fashion</span>
+  <span className="dropdown-text">Fashion</span><hr/>
   <i className="fas fa-chevron-right"></i>
   <div className="dropdown-submenu">
     <div className="submenu-content">
@@ -103,8 +103,8 @@ const Department = () => {
               src="https://storage.googleapis.com/a1aa/image/W2izzBRH5TLFH_RxgYQ80nm85KxvLkB_W2k0P97o9cU.jpg"
               width="24"
             />
-            <span className="dropdown-text">Computer</span>
-            <i className="fas fa-chevron-right"></i>
+            <span className="dropdown-text">Computer</span><hr/>
+            {/* <i className="fas fa-chevron-right"></i> */}
           </li>
           <li className="dropdown-item">
   <img
@@ -173,6 +173,53 @@ const Department = () => {
             />
             <span className="dropdown-text">Smartphone</span>
             <i className="fas fa-chevron-right"></i>
+            <div className="dropdown-submenu">
+    <div className="submenu-content">
+      <div className="grid-container1">
+        <div>
+          <h2 className="category-title">Cup cake</h2>
+          <hr />
+          <ul>
+          <li>Girls New</li>
+                    <li>Boys News</li>
+                    <li>Cakes & Cookiers</li>
+                    <li>Cup cake</li>
+                    <li>Children</li>
+                    <li>Cakes & Cookiers</li>
+                    <li>Sushi Cormer</li>
+          </ul>
+        </div>
+        <div>
+          <h2 className="category-title">ELECTRONICS</h2>
+          <hr />
+          <ul>
+          <li>Boys News</li>
+                    <li>Girls New</li>
+                    <li>Cup cake</li>
+                    <li>Pearl Jewelry</li>
+                    <li>Jewelry</li>
+                    <li>Cup cake</li>
+                    <li>Delicacies</li>
+                    <li>Angene mafin</li>
+          </ul>
+        </div>
+        <div>
+          <h2 className="category-title">Living room</h2>
+          <hr />
+          <ul>
+          <li>Verture agoent</li>
+                    <li>Boys News</li>
+                    <li>Body Chains</li>
+                    <li>DIY Beads</li>
+                    <li>Web Cameras</li>
+                    <li>Laptop & Notebook</li>
+                    <li>Body Chains</li>
+          </ul>
+        </div>
+        
+      </div>
+    </div>
+  </div>
           </li>
           <li className="dropdown-item">
             <img
@@ -184,6 +231,76 @@ const Department = () => {
             />
             <span className="dropdown-text">Health &amp; Beauty</span>
             <i className="fas fa-chevron-right"></i>
+            <div className="dropdown-submenu">
+              <div className="submenu-content">
+                <div className="grid-container2">
+                {/* <!-- Children --> */}
+      <div className="menu-item">
+        <li className="arrows">Children<i className="fas fa-chevron-right"></i></li>
+        <hr />
+        <div className="dropdown-options">
+          <li>Delicacies</li>
+          <li>Body Chains</li>
+          <li>DIY Beads</li><li>Salads</li>
+        </div>
+      </div>
+      <div className="menu-item">
+        <li className="arrows">Children<i className="fas fa-chevron-right"></i></li>
+        <hr />
+        <div className="dropdown-options">
+          <li>Girls New</li>
+          <div className="menu-items">
+          <li className="arrows">Boys News<i className="fas fa-chevron-right"></i></li>
+          <div className="dropdown-options topp">
+            <li>Cakes & Cookiers</li>
+            </div>
+          </div>
+          <li>Electronics</li>
+          <div className="menu-items">
+          <li className="arrows">Egante mangetes<i className="fas fa-chevron-right"></i></li>
+          <div className="dropdown-options topp">
+            <li>Printers</li>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+                  {/* <!-- Kitchen --> */}
+      <div className="menu-item">
+        <li className="arrows">Kitchen</li>
+        <hr />
+        
+      </div>
+      <div className="menu-item">
+        <li className="arrows">Children<i className="fas fa-chevron-right"></i></li>
+        <hr />
+        <div className="dropdown-options">
+          <li>Sushi Cormer</li>
+          <li>Delicacies</li>
+          <li>Cup cake</li><li>Boys News</li>
+        </div>
+      </div>
+      {/* <!-- Salads --> */}
+      <div className="menu-item">
+  <li className="arrows">Salads<i className="fas fa-chevron-right"></i></li>
+  <hr />
+  <div className="dropdown-options">
+    
+
+    {/* <!-- Cakes & Cookiers --> */}
+    <div className="menu-items">
+      <li className="arrows">Cakes & Cookiers<i className="fas fa-chevron-right"></i></li>
+      <div className="dropdown-options">
+        <li>Sushi Cormer</li>
+        <li>Angene Mafin</li>
+        <li>Rengae Manges</li>
+      </div>
+    </div>
+  </div>
+</div>
+                </div>
+              </div>
+            </div>
           </li>
           <li className="dropdown-item">
             <img
@@ -194,7 +311,7 @@ const Department = () => {
               width="24"
             />
             <span className="dropdown-text">Sport Clothing</span>
-            <i className="fas fa-chevron-right"></i>
+            {/* <i className="fas fa-chevron-right"></i> */}
           </li>
           <li className="dropdown-item">
             <img
@@ -205,7 +322,7 @@ const Department = () => {
               width="24"
             />
             <span className="dropdown-text">Watch &amp; Jewelry</span>
-            <i className="fas fa-chevron-right"></i>
+            {/* <i className="fas fa-chevron-right"></i> */}
           </li>
           <li className="dropdown-item">
             <img
@@ -216,7 +333,7 @@ const Department = () => {
               width="24"
             />
             <span className="dropdown-text">Kitchen</span>
-            <i className="fas fa-chevron-right"></i>
+            {/* <i className="fas fa-chevron-right"></i> */}
           </li>
           <li className="dropdown-item">
             <img
@@ -226,8 +343,8 @@ const Department = () => {
               src="https://storage.googleapis.com/a1aa/image/rdPVMcv97R0SF-xHB1fiNzxDxKtIIGc1szR6RsR6DVE.jpg"
               width="24"
             />
-            <span className="dropdown-text">Accessories</span>
-            <i className="fas fa-chevron-right"></i>
+            <span className="dropdown-text">Accessories</span><hr/>
+            {/* <i className="fas fa-chevron-right"></i> */}
           </li>
           <li className="dropdown-item">
             <img
@@ -238,7 +355,7 @@ const Department = () => {
               width="24"
             />
             <span className="dropdown-text">More Categories</span>
-            <i className="fas fa-chevron-right"></i>
+            {/* <i className="fas fa-chevron-right"></i> */}
           </li>
         </ul>
         
