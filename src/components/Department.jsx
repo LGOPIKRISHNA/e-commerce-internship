@@ -1,8 +1,12 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect , useContext} from "react";
+import { CartContext } from "./CartContext";
+import CartShow from "../components/CartShow.jsx";
 import "../styles/Department.css"; // Import the CSS file for styling
 
 const Department = () => {
   const [isDropdownVisible, setIsDropdownVisible] = useState(true);
+const { cartCount } = useContext(CartContext);
+const [isCartShowVisible, setIsCartShowVisible] = useState(false);
 
   // Function to handle scroll events
   const handleScroll = () => {
@@ -29,11 +33,19 @@ const Department = () => {
   const handleMouseLeave = () => {
     setIsDropdownOpen(false);
   };
-
+  const handleCartMouseLeave = () => {
+    setIsCartShowVisible(false);
+  };
+  const handleCartMouseEnter = () => {
+    setIsCartShowVisible(true);
+  };
+  const toggleDropdown = () => {
+    setIsDropdownVisible(!isDropdownVisible); // Toggle dropdown visibility
+  };
   return (
     <div className="containe">
       {/* Left Section */}
-      <div className="left-section">
+      <div className="left-section" onClick={toggleDropdown}>
         <i className="fas fa-bars"></i>
         <span className="department-text">ALL DEPARTMENTS</span>
         <i className="fas fa-chevron-down"></i>
@@ -464,9 +476,16 @@ const Department = () => {
         <div className="icon-container" data-tooltip="Compare">
           <i className="fas fa-retweet"></i>
         </div>
-        <div className="icon-container cart-icon" data-tooltip="Cart">
+        <div className="icon-container cart-icon" data-tooltip="Cart" 
+        onMouseEnter={handleCartMouseEnter}
+          onMouseLeave={handleCartMouseLeave}>
           <i className="fas fa-shopping-cart"></i>
-          <span className="cart-count">0</span>
+          <span className="cart-count">{cartCount}</span>
+          {isCartShowVisible && (
+    <div className="cart-dropdown">
+      <CartShow />
+    </div>
+  )}
         </div>
       </div>
     </div>

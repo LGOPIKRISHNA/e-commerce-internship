@@ -1,9 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
+import { CartContext } from "./CartContext";
 import '../styles/Electronics.css'; // Import the CSS file
 
 const Electronics = () => {
     // State to manage the selected category
     const [selectedCategory, setSelectedCategory] = useState('MOST RATING');
+    const { cartCount, addToCart } = useContext(CartContext);
 
     // Sample data for products
     const products = {
@@ -238,7 +240,7 @@ const Electronics = () => {
                                 {product.discount && <div className="electronics-product-discount">{product.discount}</div>}
                                 <div className="electronics-product-overlay">
                                     <div className="electronics-product-icon"><i className="fas fa-search"></i></div>
-                                    <button className="electronics-product-button">Add to cart</button>
+                                    <button className="electronics-product-button" onClick={() => addToCart(product)}>Add to cart</button>
                                     <div className="electronics-product-icons">
                                         <i className="fas fa-heart"></i>
                                         <i className="fas fa-sync-alt"></i>

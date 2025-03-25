@@ -13,9 +13,9 @@ body {
 .navbar {
   background-color: #fff;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  position: sticky; /* Make navbar sticky */
-  top: 0; /* Stick to the top of the viewport */
-  z-index: 1000; /* Ensure it stays above other content */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
   padding: 10px;
 }
 
@@ -64,7 +64,7 @@ body {
 }
 
 .nav-link:hover {
-  color: #007bff;
+  text-decoration: underline;
 }
 
 /* Dropdown Specific Styles */
@@ -84,23 +84,23 @@ body {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   opacity: 0;
   visibility: hidden;
-  transform: translateY(-10px); /* Added for smooth movement */
+  transform: translateY(-10px);
   transition: 
     opacity 0.4s ease-in-out,
     visibility 0.4s ease-in-out,
     transform 0.4s ease-in-out;
   z-index: 1000;
   padding: 2rem;
-  pointer-events: none; /* Prevents interaction when hidden */
+  pointer-events: none;
 }
 
 .dropdown-menu.open {
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
-  pointer-events: auto; /* Re-enable interaction when visible */
+  pointer-events: auto;
   transition: 
-    opacity 0.4s ease-in-out 0.1s, /* Added slight delay */
+    opacity 0.4s ease-in-out 0.1s,
     visibility 0.4s ease-in-out 0.1s,
     transform 0.4s ease-in-out 0.1s;
 }
@@ -108,33 +108,44 @@ body {
 /* Category Grid Structure */
 .category-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   gap: 2rem;
   max-width: 1200px;
   margin: 0 auto;
-  margin-left: -50rem;
-  background-color: #fff; /* Ensure background is white */
+  margin-left: -48.9rem;
+  background-color: #fff;
 }
 
 .category-grid1 {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   gap: 2rem;
   max-width: 1200px;
   margin: 0 auto;
-  margin-left: -30rem;
-  background-color: #fff; /* Ensure background is white */
+  margin-left: -40rem;
+  background-color: #fff;
 }
 
+.category-grid21 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Creates 2 equal-width columns */
+  gap: 1.5rem;/* Spacing between grid items */
+  grid-auto-rows: minmax(10px, 9); /* Ensures rows have a minimum height of 100px and grow as needed */
+  width: 100%; /* Ensures the grid takes up the full width of its container */
+  margin-left: 0px; /* Centers the grid horizontally if needed */
+  background-color: #fff; /* Background color for the grid */
+}
 .category-column {
   padding: 0 1rem;
-  background-color: #fff; /* Ensure background is white */
+  background-color: #fff;
+
 }
 
 .category-column h4 {
-  font-size: 1.1rem;
+  font-size: 0.81rem;
   margin-bottom: 1rem;
   color: #333;
+  text-decoration: underline;
   font-weight: 600;
   text-transform: uppercase;
 }
@@ -157,9 +168,18 @@ body {
   color: #000;
 }
 
+.category-column a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.category-column a:hover {
+  text-decoration: underline;
+}
+
 .category-column1 {
   padding: 0 1rem;
-  background-color: #fff; /* Ensure background is white */
+  background-color: #fff;
 }
 
 .category-column1 h4 {
@@ -214,11 +234,4 @@ body {
   .category-grid {
     grid-template-columns: 1fr;
   }
-}
-
-/* Removed Image Grid Styles */
-.image-grid,
-.image-item,
-.image-item img {
-  display: none !important;
 }

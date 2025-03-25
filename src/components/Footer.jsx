@@ -1,52 +1,68 @@
-import React from 'react';
-import '../styles/Footer.css';
+import React from "react";
+import "../styles/Footer.css";
+import Rewards from "./Rewards";
+import Info from"./Info";
 
-function Footer() {
+const Footer = () => {
   return (
     <footer className="footer">
-      <div className="container">
-        <div className="footer-grid">
-          <div className="footer-section">
-            <h3>Style Store</h3>
-            <p className="footer-description">Your one-stop destination for trendy fashion and accessories.</p>
-          </div>
-          <div className="footer-section">
-            <h4>Quick Links</h4>
-            <ul className="footer-links">
-              <li><a href="#" className="footer-link">Home</a></li>
-              <li><a href="#" className="footer-link">Shop</a></li>
-              <li><a href="#" className="footer-link">Categories</a></li>
-              <li><a href="#" className="footer-link">About Us</a></li>
-            </ul>
-          </div>
-          <div className="footer-section">
-            <h4>Customer Service</h4>
-            <ul className="footer-links">
-              <li><a href="#" className="footer-link">Contact Us</a></li>
-              <li><a href="#" className="footer-link">Shipping Policy</a></li>
-              <li><a href="#" className="footer-link">Returns & Exchanges</a></li>
-              <li><a href="#" className="footer-link">FAQ</a></li>
-            </ul>
-          </div>
-          <div className="footer-section">
-            <h4>Newsletter</h4>
-            <p className="footer-description">Subscribe to get special offers and updates.</p>
-            <div className="newsletter-form">
-              <input
-                type="email"
-                placeholder="Enter"
-                className="newsletter-input"
-              />
-              <button className="newsletter-button">Subscribe</button>
-            </div>
-          </div>
-        </div>
-        <div className="footer-bottom">
-          <p>&copy; 2024 Style Store. All rights reserved.</p>
-        </div>
+      <Rewards/>
+      <Info/>
+      <p className="footer-text">
+        SO Revo © 2015 - 2025. All Rights Reserved. Designed by
+        <a href="#" className="footer-link">
+          OpenCartWorks.Com
+        </a>
+      </p>
+      <div className="payment-logos">
+        <img
+          src="https://storage.googleapis.com/a1aa/image/hz0m1symPAblXruFRMSA5MHflfQ5X5eDvSxnw0vuUHc.jpg"
+          alt="Visa logo"
+          className="logo"
+        />
+        <img
+          src="https://storage.googleapis.com/a1aa/image/-XjOBE9aFnM7c5YAhYqtqIFdHB8LYdglgxyt8OP61lg.jpg"
+          alt="MasterCard logo"
+          className="logo"
+        />
+        <img
+          src="https://storage.googleapis.com/a1aa/image/mqnPt7M0yni3jxLTLFn7pUj5KEaQjThSmFEOvvte6W4.jpg"
+          alt="PayPal logo"
+          className="logo"
+        />
+        <img
+          src="https://storage.googleapis.com/a1aa/image/PfqMSUbTHj4PcuxAqU_CZS_B8Hnf1z4kKxaG3nRa7WM.jpg"
+          alt="American Express logo"
+          className="logo"
+        />
+        <img
+          src="https://storage.googleapis.com/a1aa/image/XcFzFze0ieyQmSbca5RkJMha8qBfwvNEGcPXODffnTY.jpg"
+          alt="Visa Electron logo"
+          className="logo"
+        />
+        <img
+          src="https://storage.googleapis.com/a1aa/image/qyBB4xTuwG1qKwOx0FmR76pWmKCqN13dBpqPLRZAf1c.jpg"
+          alt="Laser logo"
+          className="logo"
+        />
+        <img
+          src="https://storage.googleapis.com/a1aa/image/pss_DM1Zypuy9ceBKRJ9KXsigXA54keLZZtHydeoayg.jpg"
+          alt="Maestro logo"
+          className="logo"
+        />
+        <img
+          src="https://storage.googleapis.com/a1aa/image/Jn0CXI8evTQZ9QqzzMwdqDJ928PGtSjRLezFeOizAA8.jpg"
+          alt="Delta logo"
+          className="logo"
+        />
+        <img
+          src="https://storage.googleapis.com/a1aa/image/fxXaWnE5mNDpaRkNuKZB4MpbV8QadJCZMNMjW8dyWLc.jpg"
+          alt="Solo logo"
+          className="logo"
+        />
       </div>
     </footer>
   );
-}
+};
 
-export default Footer
+export default Footer;

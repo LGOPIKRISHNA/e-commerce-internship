@@ -36,15 +36,19 @@ const ProductList = () => {
   ];
 
   return (
-    <div className="container">
-      <h2 className="title">FEATURED CATEGORIES</h2>
-      <div className="underline"></div>
-      <div className="grid">
+    <div className="ProductList-container">
+      <h2 className="ProductList-title">FEATURED CATEGORIES</h2>
+      <div className="ProductList-underline"></div>
+      <div className="ProductList-grid">
         {categories.map((category, index) => (
-          <div key={index} className="card">
-            <img src={category.image} alt={category.alt} className="image" />
-            <div className="content">
-              <h3 className="category-title">{category.title}</h3>
+          <div key={index} className="ProductList-card">
+            <img
+              src={category.image}
+              alt={category.alt}
+              className="ProductList-image"
+            />
+            <div className="ProductList-content">
+              <h3 className="ProductList-category-title">{category.title}</h3>
             </div>
           </div>
         ))}

@@ -1,188 +1,83 @@
 import React from 'react';
-import styled from 'styled-components';
+import '../styles/Signup.css'; // Import the CSS file
+import AccountSection from './AccountSection'; // Import the AccountSection component
 
 const Signup = () => {
-  return (
-    <StyledWrapper>
-      <div className="container">
-        {/* <div className="left">
-          <img
-            src="https://img.freepik.com/free-vector/mobile-login-concept-illustration_114360-83.jpg"
-            alt="Signup"
-            className="signup-image"
-          />
-        </div> */}
-        <div className="right">
-          <form className="form">
-            <p className="title">Register</p>
-            <p className="message">Signup now and get full access to our app.</p>
-            <div className="flex">
-              <label>
-                <input className="input" type="text" placeholder required />
-                <span>Firstname</span>
-              </label>
-              <label>
-                <input className="input" type="text" placeholder required />
-                <span>Lastname</span>
-              </label>
+    return (
+        <div className="container">
+            <div className="flex-container">
+                <div className="form-container">
+                    <div className="breadcrumb">
+                        <a href="#" className="breadcrumb-link">Home</a> &gt; 
+                        <a href="#" className="breadcrumb-link">Account</a> &gt; 
+                        <span className="breadcrumb-current">Register</span>
+                    </div>
+                    <h1 className="form-title">Register Account</h1>
+                    <p className="form-subtitle">
+                        If you already have an account with us, please login at the login page.
+                    </p>
+
+                    <h2 className="section-title">Your Personal Details</h2>
+                    <hr className="section-divider" />
+                    <form>
+                        <div className="form-group">
+                            <label className="form-label">First Name</label>
+                            <input type="text" className="form-input" placeholder="First Name" />
+                        </div>
+                        <div className="form-group">
+                            <label className="form-label">Last Name</label>
+                            <input type="text" className="form-input" placeholder="Last Name" />
+                        </div>
+                        <div className="form-group">
+                            <label className="form-label">E-Mail</label>
+                            <input type="email" className="form-input" placeholder="E-Mail" />
+                        </div>
+                        <div className="form-group">
+                            <label className="form-label">Telephone</label>
+                            <input type="text" className="form-input" placeholder="Telephone" />
+                        </div>
+
+                        <h2 className="section-title">Your Password</h2>
+                        <hr className="section-divider" />
+                        <div className="form-group">
+                            <label className="form-label">Password</label>
+                            <input type="password" className="form-input" placeholder="Password" />
+                        </div>
+                        <div className="form-group">
+                            <label className="form-label">Password Confirm</label>
+                            <input type="password" className="form-input" placeholder="Password Confirm" />
+                        </div>
+
+                        <h2 className="section-title">Newsletter</h2>
+                        <hr className="section-divider" />
+                        <div className="form-group">
+                            <label className="form-label">Subscribe</label>
+                            <div className="radio-group">
+                                <input type="radio" name="subscribe" className="radio-input" checked />
+                                <label className="radio-label">Yes</label>
+                                <input type="radio" name="subscribe" className="radio-input" />
+                                <label className="radio-label">No</label>
+                            </div>
+                        </div>
+
+                        <div className="form-group agreement">
+                            <label className="checkbox-label">
+                                <input type="checkbox" className="checkbox-input" />
+                                <span className="checkbox-text">
+                                    I have read and agree to the <a href="#" className="link">Support 24/7 page</a>
+                                </span>
+                            </label>
+                        </div>
+
+                        <button type="submit" className="submit-button">CONTINUE</button>
+                    </form>
+                </div>
+
+                {/* Use the AccountSection component here */}
+                <AccountSection />
             </div>
-            <label>
-              <input className="input" type="email" placeholder required />
-              <span>Email</span>
-            </label>
-            <label>
-              <input className="input" type="password" placeholder required />
-              <span>Password</span>
-            </label>
-            <label>
-              <input className="input" type="password" placeholder required />
-              <span>Confirm password</span>
-            </label>
-            <button className="submit">Submit</button>
-            <p className="signin">
-              Already have an account? <a href="/signin">Signin</a>
-            </p>
-          </form>
         </div>
-      </div>
-    </StyledWrapper>
-  );
+    );
 };
-
-const StyledWrapper = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  width: 100vw;
-  background-color: #f5f5f5;
-
-  .container {
-    display: flex;
-    width: 80%;
-    max-width: 1200px;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .left {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .signup-image {
-    width: 100%;
-    max-width: 500px;
-    object-fit: cover;
-    border-radius: 10px;
-  }
-
-  .right {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    max-width: 350px;
-    padding: 20px;
-    border-radius: 20px;
-    background-color: #1a1a1a;
-    color: #fff;
-    border: 1px solid #333;
-  }
-
-  .title {
-    font-size: 28px;
-    font-weight: 600;
-    letter-spacing: -1px;
-    color: #00bfff;
-  }
-
-  .message, .signin {
-    font-size: 14.5px;
-    color: rgba(255, 255, 255, 0.7);
-  }
-
-  .signin {
-    text-align: center;
-  }
-
-  .signin a:hover {
-    text-decoration: underline royalblue;
-  }
-
-  .signin a {
-    color: #00bfff;
-  }
-
-  .flex {
-    display: flex;
-    width: 100%;
-    gap: 6px;
-  }
-
-  .form label {
-    position: relative;
-  }
-
-  .form label .input {
-    background-color: #333;
-    color: #fff;
-    width: 100%;
-    padding: 20px 05px 05px 10px;
-    outline: 0;
-    border: 1px solid rgba(105, 105, 105, 0.397);
-    border-radius: 10px;
-  }
-
-  .form label .input + span {
-    color: rgba(255, 255, 255, 0.5);
-    position: absolute;
-    left: 10px;
-    top: 0px;
-    font-size: 0.9em;
-    cursor: text;
-    transition: 0.3s ease;
-  }
-
-  .form label .input:placeholder-shown + span {
-    top: 12.5px;
-    font-size: 0.9em;
-  }
-
-  .form label .input:focus + span,
-  .form label .input:valid + span {
-    color: #00bfff;
-    top: 0px;
-    font-size: 0.7em;
-    font-weight: 600;
-  }
-
-  .input {
-    font-size: medium;
-  }
-
-  .submit {
-    border: none;
-    outline: none;
-    padding: 10px;
-    border-radius: 10px;
-    color: #fff;
-    font-size: 16px;
-    transform: .3s ease;
-    background-color: #00bfff;
-  }
-
-  .submit:hover {
-    background-color: #00bfff96;
-  }
-`;
 
 export default Signup;

@@ -101,10 +101,10 @@
 /* Static Dropdown Menu Styling */
 .static-dropdown-menu {
     position: absolute;
-    top: 23%; /* Position below the left-section */
+    top: 25%; /* Position below the left-section */
     margin-left: 2.99%;
     left: 0;
-    width: 18.3%; /* Full width of the parent */
+    width: 19%; /* Full width of the parent */
     background-color: white; /* White background */
     border: 1px solid #ccc; /* Light gray border */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
@@ -342,4 +342,36 @@
     justify-content: space-between; /* Push items to the edges */
     align-items: center; /* Vertically center items */
     margin-left: 20px; /* Adjust as needed */
+}
+
+
+
+
+
+
+
+
+/* Cart Icon Container */
+.cart-icon {
+  position: relative; /* Ensure the dropdown is positioned relative to this container */
+}
+
+/* Cart Dropdown Styling */
+.cart-dropdown {
+  position: absolute;
+  top: 100%; /* Position the dropdown below the cart icon */
+  right: 0; /* Align the dropdown with the right edge of the cart icon */
+  z-index: 1000; /* Ensure it appears above other elements */
+  margin-top: 8px; /* Add a small gap between the cart icon and the dropdown */
+  background-color: white; /* Match the background color of the dropdown */
+  border: 1px solid #e0e0e0; /* Add a border for better visibility */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+/* Ensure the CartShow component does not overflow */
+.CartShow-container {
+  max-height: 400px; /* Set a max height for the dropdown */
+  overflow-y: auto; /* Add scroll if the content exceeds the max height */
+  padding: 16px; /* Add padding for better spacing */
 }
